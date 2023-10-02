@@ -1,14 +1,11 @@
 package v1
 
 const (
-	defaultRedisNumber           = 3
-	defaultSentinelNumber        = 3
-	defaultSentinelExporterImage = "quay.io/oliver006/redis_exporter:v1.43.0"
-	defaultExporterImage         = "quay.io/oliver006/redis_exporter:v1.43.0"
-	defaultImage                 = "redis:6.2.6-alpine"
-	defaultRedisPort             = 6379
-	HealthyState                 = "Healthy"
-	NotHealthyState              = "NotHealthy"
+	defaultRedisNumber    = 3
+	defaultSentinelNumber = 3
+	defaultRedisPort      = 6379
+	HealthyState          = "Healthy"
+	NotHealthyState       = "NotHealthy"
 )
 
 var (
@@ -22,4 +19,7 @@ var (
 	bootstrappingRedisCustomConfig = []string{
 		"replica-priority 0",
 	}
+	DefaultSentinelExporterImage = "quay.io/oliver006/redis_exporter:v1.43.0"
+	DefaultExporterImage         = "quay.io/oliver006/redis_exporter:v1.43.0"
+	DefaultImage                 = "redis:6.2.6-alpine"
 )
